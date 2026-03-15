@@ -1,0 +1,82 @@
+# 📊 Analisi del Dataset di Vendite
+
+## 1. 🏆 Prodotti Più Venduti
+
+Analizzando le unità vendute e i ricavi per prodotto:
+
+### Per Unità Vendute (stima aggregata)
+
+| Prodotto | Posizione | Note |
+|----------|-----------|------|
+| **Paseo** | 🥇 1° | Prodotto con il maggior numero di transazioni (~80+ righe) e volumi elevati |
+| **VTT** | 🥈 2° | Forte presenza in tutti i segmenti e paesi |
+| **Velo** | 🥉 3° | Alto volume, specialmente in Government e Small Business |
+| **Montana** | 4° | Buone performance nei segmenti Government e Small Business |
+| **Carretera** | 5° | Volumi significativi ma price point basso |
+| **Amarilla** | 6° | Presente ovunque ma volumi unitari minori |
+
+### Per Ricavi (Gross Sales)
+
+| Prodotto | Caratteristica |
+|----------|---------------|
+| **Paseo** | Massimi ricavi assoluti — es. `$1.207.500` (Gov/USA/Low) e `$998.200` (Gov/Canada) |
+| **VTT** | Prezzi unitari altissimi ($250 manifattura) → ricavi elevati in Government |
+| **Velo** | Sale Price alto ($300-$350) in Small Business e Government |
+| **Montana** | Record singolo: `$1.140.750` (Small Business/Canada) |
+
+---
+
+## 2. 🌍 Paesi per Ricavi
+
+### Ranking Stimato per Gross Sales Totali
+
+```
+🥇 United States of America  → Volumi altissimi in tutti i segmenti
+                                Record: $1.207.500 (Gov/Paseo/Low/July)
+                                Segmenti forti: Government, Small Business
+
+🥈 Canada                    → Fortissimo in Government e Small Business
+                                Record: $998.200 (Gov/Paseo/Low + Carretera/Low)
+                                Manager: NL06, NL11, NL16, NL21
+
+🥉 Germany                   → Eccellente in Government (prezzi $350)
+                                Record: $1.038.100 (Gov/Amarilla + Velo/Low)
+                                Manager: NL08, NL13, NL23
+
+4° France                    → Forte in Government e Small Business
+                                Record: $1.006.600 (Gov/Amarilla/Sep 2022)
+                                Manager: NL07, NL12, NL22
+
+5° Mexico                    → Performance solide ma volumi minori
+                                Forte in Government con sale price $350
+                                Manager: NL09, NL14, NL24
+```
+
+### Ricavi per Segmento e Paese
+
+| Segmento | Paese più forte | Note |
+|----------|----------------|------|
+| **Government** | USA + Germany | Sale price $350 → ricavi enormi |
+| **Small Business** | USA + Canada | Sale price $300 |
+| **Enterprise** | Canada + Germany | Sale price $125 |
+| **Midmarket** | Canada + France | Sale price $15 |
+| **Channel Partners** | Canada | Sale price $12 |
+
+---
+
+## 3. 🔍 Pattern e Anomalie Interessanti
+
+### 📈 Pattern Rilevati
+
+**A) Struttura dei Prezzi Multi-Livello**
+```
+Channel Partners: $7 - $12   → margini bassissimi
+Midmarket:        $15         → margini contenuti  
+Enterprise:       $125        → spesso in PERDITA
+Small Business:   $300        → margini buoni
+Government:       $7/$20/$350 → alta variabilità ⚠️
+```
+
+**B) Stagionalità**
+- Picchi vendite in **Ottobre, Novembre, Dicembre** (Q4)
+- **Luglio** strong per Government (
