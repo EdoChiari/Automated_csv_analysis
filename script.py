@@ -3,8 +3,11 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+# Chiede quale file analizzare
+nome_file = input("Quale file CSV vuoi analizzare? ")
+
 # Legge il contenuto del CSV
-with open("Test_csv_analyzer.csv", "r") as file:
+with open(nome_file, "r") as file:
     csv_content = file.read()
 
 # Crea la connessione con Claude
